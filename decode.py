@@ -25,5 +25,5 @@ bottom_enhanced = cv2.equalizeHist(bottom_section)
 enhanced_image = cv2.vconcat([top_enhanced, middle_enhanced, bottom_enhanced])
 
 # Save and display the grayscale image
-cv2.imwrite('data/grayscale_message.png', enhanced_image)
+cv2.imwrite('result/grayscale_message.png', enhanced_image)
 

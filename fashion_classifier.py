@@ -64,7 +64,7 @@ plt.figure(figsize=(10, 8))
 colors = np.random.rand(len(tsne_results[:, 0]))
 plt.scatter(tsne_results[:, 0], tsne_results[:, 1], s=2, c=y_test, cmap="tab10")
 plt.title('t-SNE Visualization of Latent Space (Fashion-MNIST)')
-plt.savefig('t-SNE.png')
+plt.savefig('result/t-SNE.png')
 plt.show()
 
 # Latent feature extraction using the encoder
@@ -114,7 +114,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 
-plt.savefig('training.png')
+plt.savefig('result/training.png')
 plt.show()
 
 # Evaluate the classifier on the test set
@@ -144,5 +144,5 @@ for i, incorrect in enumerate(incorrect_indices[:5]):
     plt.title(f"True: {class_names[y_true[incorrect]]}\nPred: {class_names[y_pred[incorrect]]}")
     plt.axis('off')
 
-plt.savefig('predictions.png')
+plt.savefig('result/predictions.png')
 plt.show()
