@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import pyAprilTag
 
-# Load the calibration data (K matrix and distortion coefficients)
 # Camera intrinsic matrix (K)
 K = np.array([[958.71843813, 0, 622.4762461], 
               [0, 959.42584804, 362.01675535], 
@@ -60,6 +59,7 @@ if len(ids) > 0:
             image = cv2.line(image, tuple(cube_points_2D[i]), tuple(cube_points_2D[i + 4]), (0, 0, 255), 2)
 
     # Show the result
+    cv2.imwrite('result/3D_cube_on_AprilTag.jpg', image)
     cv2.imshow('3D Cube on AprilTag', image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
